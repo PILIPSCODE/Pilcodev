@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import "lenis/dist/lenis.css";
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"] });
@@ -14,6 +15,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
+import { SmoothScroll } from "@/components/SmoothScroll";
 
 export default function RootLayout({
   children,
@@ -21,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className="scroll-smooth" suppressHydrationWarning>
+    <html lang="id" suppressHydrationWarning>
       <body className={`${outfit.className} bg-white dark:bg-black text-black dark:text-white antialiased transition-colors duration-300`}>
         <ThemeProvider
           attribute="class"
@@ -29,11 +31,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          {children}
-          <Contact />
-          <Footer />
-          <WhatsAppFloatingButton />
+          <SmoothScroll>
+            <Header />
+            {children}
+            <Contact />
+            <Footer />
+            <WhatsAppFloatingButton />
+          </SmoothScroll>
         </ThemeProvider>
       </body>
     </html>

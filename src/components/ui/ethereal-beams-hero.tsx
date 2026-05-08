@@ -1,7 +1,7 @@
 "use client";
 
-import type React from "react"
-import { forwardRef, useImperativeHandle, useEffect, useRef, useMemo, type FC, type ReactNode } from "react"
+import React from "react"
+import { forwardRef, useImperativeHandle, useEffect, useRef, useMemo, useState, useCallback, type FC, type ReactNode } from "react"
 import * as THREE from "three"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { PerspectiveCamera } from "@react-three/drei"
@@ -91,11 +91,69 @@ ${code}`)
   return mat
 }
 
-const CanvasWrapper: FC<{ children: ReactNode }> = ({ children }) => (
-  <Canvas dpr={[1, 2]} frameloop="always" className="w-full h-full relative">
-    {children}
-  </Canvas>
-)
+// Error boundary for WebGL failures
+class WebGLErrorBoundary extends React.Component<
+  { children: ReactNode; fallback: ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: ReactNode; fallback: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) return this.props.fallback;
+    return this.props.children;
+  }
+}
+
+const CanvasWrapper: FC<{ children: ReactNode }> = ({ children }) => {
+  const [webglFailed, setWebglFailed] = useState(false);
+
+  // Check WebGL support once
+  const isWebGLSupported = useCallback(() => {
+    try {
+      const c = document.createElement("canvas");
+      return !!(c.getContext("webgl2") || c.getContext("webgl"));
+    } catch {
+      return false;
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!isWebGLSupported()) setWebglFailed(true);
+  }, [isWebGLSupported]);
+
+  if (webglFailed) return null; // Falls through to CSS gradient in parent
+
+  const fallback = <div className="w-full h-full bg-black" />;
+
+  return (
+    <WebGLErrorBoundary fallback={fallback}>
+      <Canvas
+        dpr={[1, 1.5]}
+        frameloop="always"
+        className="w-full h-full relative"
+        gl={{
+          antialias: false,
+          powerPreference: "high-performance",
+          failIfMajorPerformanceCaveat: false,
+        }}
+        onCreated={({ gl }) => {
+          const canvas = gl.domElement;
+          canvas.addEventListener("webglcontextlost", (e) => {
+            e.preventDefault();
+            setWebglFailed(true);
+          });
+        }}
+      >
+        {children}
+      </Canvas>
+    </WebGLErrorBoundary>
+  );
+}
 
 const hexToNormalizedRGB = (hex: string): [number, number, number] => {
   const clean = hex.replace("#", "")
@@ -280,7 +338,7 @@ const MergedPlanes = forwardRef<
   useImperativeHandle(ref, () => mesh.current)
 
   const geometry = useMemo(
-    () => createStackedPlanesBufferGeometry(count, width, height, 0, 100),
+    () => createStackedPlanesBufferGeometry(count, width, height, 0, 60),
     [count, width, height],
   )
 
@@ -476,10 +534,10 @@ export default function EtherealBeamsHero() {
         <Beams
           beamWidth={2.5}
           beamHeight={18}
-          beamNumber={15}
+          beamNumber={10}
           lightColor="#ffffff"
-          speed={2.5}
-          noiseIntensity={2}
+          speed={2}
+          noiseIntensity={1.75}
           scale={0.15}
           rotation={43}
         />
