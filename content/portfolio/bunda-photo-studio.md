@@ -2,7 +2,7 @@
 title: "Bunda Photo Studio"
 category: "Website"
 date: "2023-08-15"
-image: "https://i.ibb.co.com/99SKGZf3/image.jpg"
+image: "https://i.ibb.co.com/394tphgG/image.jpg"
 description: "Website katalog untuk jasa photo studio bunda"
 previewUrl: "https://bundaphotostudio.vercel.app"
 ---

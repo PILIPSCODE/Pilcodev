@@ -2,7 +2,7 @@
 title: "G Youth Store"
 category: "Website"
 date: "2024-07-01"
-image: "https://i.ibb.co.com/8LM51BCq/image.jpg"
+image: "https://i.ibb.co.com/zhRW1zHn/image.jpg"
 description: "Website pengelolaan/penjualan product Komisi Remaja GKJ Gebyog"
 previewUrl: "https://g-youth-store.vercel.app/"
 ---

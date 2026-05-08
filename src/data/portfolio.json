@@ -4,7 +4,7 @@
     "category": "Website",
     "description": "Website katalog untuk jasa photo studio bunda",
     "date": "2023-08-15",
-    "image": "https://i.ibb.co.com/99SKGZf3/image.jpg",
+    "image": "https://i.ibb.co.com/394tphgG/image.jpg",
     "slug": "bunda-photo-studio",
     "readme": "portfolio/bunda-photo-studio",
     "previewUrl": "https://bundaphotostudio.vercel.app"
@@ -14,7 +14,7 @@
     "category": "Website",
     "description": "Platform untuk live tiktok dengan ai",
     "date": "2024-07-01",
-    "image": "https://i.ibb.co.com/Y7yfZqV6/image.jpg",
+    "image": "https://i.ibb.co.com/1JB4rvFy/image.jpg",
     "slug": "tiktok-live-ai",
     "readme": "portfolio/tiktok-live-ai",
     "githubUrl": "https://github.com/PILIPSCODE/Tiktok-live3d"
@@ -24,10 +24,50 @@
     "category": "Website",
     "description": "Website pengelolaan/penjualan product Komisi Remaja GKJ Gebyog",
     "date": "2026-02-01",
-    "image": "https://i.ibb.co.com/8LM51BCq/image.jpg",
+    "image": "https://i.ibb.co.com/zhRW1zHn/image.jpg",
     "slug": "gyouth-store",
     "readme": "portfolio/gyouth-store",
     "previewUrl": "https://g-youth-store.vercel.app"
+  },
+  {
+    "title": "Chilin",
+    "category": "Website",
+    "description": "Website pengelolaan/penjualan product Coffee Shop",
+    "date": "2024-02-10",
+    "image": "https://i.ibb.co.com/jv7C9H1c/image.jpg",
+    "slug": "chilin",
+    "readme": "portfolio/chilin",
+    "previewUrl": "https://chilin"
+  },
+  {
+    "title": "Zeeb Tourney",
+    "category": "Website",
+    "description": "Landing page untuk turnamen esports Zeeb Tourney",
+    "date": "2023-09-08",
+    "image": "https://i.ibb.co.com/8w8Cw43/image.jpg",
+    "slug": "zeeb-tourney",
+    "readme": "portfolio/zeeb-tourney",
+    "previewUrl": "https://zeeb-tournament-landing-3kk1a3js2-pilipscode.vercel.app/"
+  },
+  {
+    "title": "Website Perumahan",
+    "category": "Website",
+    "description": "Landing page untuk menampilkan rumah yang dijual",
+    "date": "2025-05-01",
+    "image": "https://i.ibb.co.com/4g3WQMk2/image.jpg",
+    "slug": "website-perumahan",
+    "readme": "portfolio/website-perumahan",
+    "previewUrl": "https://website-perumahan.vercel.app/"
+  },
+  {
+    "title": "Joki Tugas (Pwa Website)",
+    "category": "Website",
+    "description": "Webiste untuk menampilkan list restaurant",
+    "date": "2024-09-01",
+    "image": "https://i.ibb.co.com/5hDKRtZY/image.jpg",
+    "slug": "joki-tugas",
+    "readme": "portfolio/joki-tugas",
+    "previewUrl": "https://hungerappsss.netlify.app/"
   }
   
 ]

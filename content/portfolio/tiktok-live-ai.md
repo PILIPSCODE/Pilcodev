@@ -2,7 +2,7 @@
 title: "Tiktok Live With Ai"
 category: "Website"
 date: "2024-07-01"
-image: "https://i.ibb.co.com/Y7yfZqV6/image.jpg"
+image: "https://i.ibb.co.com/1JB4rvFy/image.jpg"
 description: "Platform untuk live tiktok dengan ai"
 githubUrl: "https://github.com/PILIPSCODE/Tiktok-live3d"
 
