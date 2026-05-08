@@ -12,7 +12,7 @@
         "price": "Rp 2.500.000",
         "features": [
           "Model sederhana (regresi / klasifikasi)",
-          "Pembersihan dataset dasar",
+          "Pembersihan dataset",
           "Pelatihan model",
           "Output prediksi (API / script)"
         ],
@@ -55,7 +55,7 @@
         ]
       }
     ],
-    "outro": "### Alur Kerja\n1. Pengerjaan dimulai setelah DP diberikan.\n2. Invoice.\n3. PRD (Persetujuan Klien).\n4. Isi Form Resource yang diperlukan.\n5. Klien berlangganan VPS jika diperlukan + Beli Domain (dari Klien). (Kami akan bantu 1 on 1)\n6. Lunasi tagihan untuk setup ads jika termasuk.\n7. Semua bug pada fitur yang disepakati di PRD gratis perbaikan.\n8. Monitoring Iklan + Laporan Analitik Ads.\n9. Bisa revisi 3 kali pertama gratis.\n",
+    "outro": "",
     "summaryFeatures": [
       "Konsultasi Perencanaan",
       "Pengembangan & Implementasi",
@@ -123,7 +123,7 @@
         ]
       }
     ],
-    "outro": "### Alur Kerja\n1. Pengerjaan dimulai setelah DP diberikan.\n2. Invoice.\n3. PRD (Persetujuan Klien).\n4. Isi Form Resource yang diperlukan untuk pembuatan aplikasi.\n5. Klien berlangganan VPS jika diperlukan + Beli Domain (dari Klien). (Kami akan bantu 1 on 1)\n6. Lunasi tagihan untuk setup ads jika termasuk.\n7. Semua bug pada fitur yang disepakati di PRD gratis perbaikan.\n8. Monitoring Iklan + Laporan Analitik Ads.\n9. Bisa revisi 3 kali pertama gratis.\n",
+    "outro": "",
     "summaryFeatures": [
       "Konsultasi Perencanaan",
       "Pengembangan & Implementasi",
@@ -184,7 +184,7 @@
         ]
       }
     ],
-    "outro": "### Alur Kerja\n1. Pengerjaan dimulai setelah DP diberikan.\n2. Invoice.\n3. PRD (Persetujuan Klien).\n4. Isi Form Resource yang diperlukan.\n5. Klien berlangganan VPS jika diperlukan + Beli Domain (dari Klien). (Kami akan bantu 1 on 1)\n6. Lunasi tagihan untuk setup ads jika termasuk.\n7. Semua bug pada fitur yang disepakati di PRD gratis perbaikan.\n8. Monitoring Iklan + Laporan Analitik Ads.\n9. Bisa revisi 3 kali pertama gratis.\n",
+    "outro": "",
     "summaryFeatures": [
       "Konsultasi Perencanaan",
       "Pengembangan & Implementasi",
@@ -201,6 +201,36 @@
     "price": "Mulai Dari Rp 200.000",
     "intro": "Kami menawarkan berbagai paket pengembangan website yang disesuaikan dengan kebutuhan Anda, mulai dari landing page sederhana hingga sistem kustom yang kompleks.",
     "packages": [
+       {
+        "title": "🥈 Landing Page",
+        "price": "Rp 200.000",
+        "features": [
+          "Landing page 1 halaman",
+          "Copywriting"
+        ],
+        "benefits": [
+          "Desain responsif (mobile friendly)",
+          "Deployment cepat (Vercel)",
+          "Free setup GitHub & Vercel",
+          "Revisi 3x",
+          "Source code"
+        ]
+      },
+      {
+        "title": "🥇 Landing Page Pro",
+        "price": "Rp 1.000.000",
+        "features": [
+          "Landing page (hingga 5 halaman)",
+          "Copywriting"
+        ],
+        "benefits": [
+          "Desain responsif (mobile friendly)",
+          "Deployment cepat (Vercel)",
+          "Free setup GitHub & Vercel",
+          "Revisi 3x",
+          "Source code"
+        ]
+      },
       {
         "title": "🥈 Landing Page + Ads Starter",
         "price": "Rp 1.200.000",
@@ -210,7 +240,14 @@
           "Copywriting",
           "1 Video Ads (AI)"
         ],
-        "benefits": []
+        "benefits": [
+          "Desain responsif (mobile friendly)",
+          "Deployment cepat (Vercel)",
+          "Free setup GitHub & Vercel",
+          "Revisi 3x",
+          "Source code",
+          "Termasuk domain"
+        ]
       },
       {
         "title": "🥇 Landing Page Pro + Ads",

@@ -1,40 +1,33 @@
 [
   {
-    "title": "Fintech Dashboard",
+    "title": "Bunda Photo Studio",
     "category": "Website",
-    "description": "Dashboard keuangan yang sangat skalabel dibangun dengan Next.js dan Tailwind.",
-    "date": "2026-04-15",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
-    "slug": "fintech-dashboard",
-    "readme": "portfolio/fintech-dashboard",
-    "previewUrl": "https://pilcodev.com",
-    "githubUrl": "https://github.com/PILIPSCODE"
+    "description": "Website katalog untuk jasa photo studio bunda",
+    "date": "2023-08-15",
+    "image": "https://i.ibb.co.com/99SKGZf3/image.jpg",
+    "slug": "bunda-photo-studio",
+    "readme": "portfolio/bunda-photo-studio",
+    "previewUrl": "https://bundaphotostudio.vercel.app"
   },
   {
-    "title": "E-Commerce App",
-    "category": "Mobile",
-    "description": "Aplikasi mobile lintas platform untuk merek ritel premium.",
-    "date": "2026-03-20",
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop",
-    "slug": "e-commerce-app",
-    "readme": "portfolio/e-commerce-app"
+    "title": "Tiktok Live With Ai",
+    "category": "Website",
+    "description": "Platform untuk live tiktok dengan ai",
+    "date": "2024-07-01",
+    "image": "https://i.ibb.co.com/Y7yfZqV6/image.jpg",
+    "slug": "tiktok-live-ai",
+    "readme": "portfolio/tiktok-live-ai",
+    "githubUrl": "https://github.com/PILIPSCODE/Tiktok-live3d"
   },
   {
-    "title": "AI Demand Forecasting",
-    "category": "Machine Learning",
-    "description": "Model AI kustom untuk memprediksi kebutuhan inventaris dengan akurasi 98%.",
-    "date": "2026-05-01",
-    "image": "https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "slug": "ai-demand-forecasting",
-    "readme": "portfolio/ai-demand-forecasting"
-  },
-  {
-    "title": "Logistics Automation",
-    "category": "Automation",
-    "description": "Otomasi alur kerja end-to-end yang menghubungkan CRM, ERP, dan saluran komunikasi.",
-    "date": "2026-02-10",
-    "image": "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "slug": "logistics-automation",
-    "readme": "portfolio/logistics-automation"
+    "title": "G Youth Store",
+    "category": "Website",
+    "description": "Website pengelolaan/penjualan product Komisi Remaja GKJ Gebyog",
+    "date": "2026-02-01",
+    "image": "https://i.ibb.co.com/8LM51BCq/image.jpg",
+    "slug": "gyouth-store",
+    "readme": "portfolio/gyouth-store",
+    "previewUrl": "https://g-youth-store.vercel.app"
   }
+  
 ]
