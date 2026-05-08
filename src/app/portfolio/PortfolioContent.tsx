@@ -2,7 +2,9 @@
 
 import { useState, useMemo } from "react";
 import Image from "next/image";
-import { Search, Calendar, Filter, SortDesc, SortAsc, LayoutGrid, Smartphone, Cpu, Zap, Globe } from "lucide-react";
+import Link from "next/link";
+import { Search, Calendar, Filter, SortDesc, SortAsc, LayoutGrid, Smartphone, Cpu, Zap, Globe, ArrowRight } from "lucide-react";
+import { GitHubIcon } from "@/components/ui/github-icon";
 
 interface PortfolioItem {
   title: string;
@@ -10,6 +12,9 @@ interface PortfolioItem {
   description: string;
   date: string;
   image: string;
+  slug: string;
+  previewUrl?: string;
+  githubUrl?: string;
 }
 
 interface PortfolioContentProps {
@@ -121,7 +126,14 @@ export function PortfolioContent({ initialPortfolio }: PortfolioContentProps) {
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                    <Link 
+                      href={`/portfolio/${item.slug}`}
+                      className="px-8 py-3 bg-white text-black rounded-full font-bold text-sm scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300"
+                    >
+                      Lihat Detail
+                    </Link>
+                  </div>
                   <div className="absolute top-8 left-8">
                     <span className="bg-white/90 dark:bg-black/90 backdrop-blur-md px-5 py-2 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-black dark:text-white shadow-xl">
                       {item.category}
@@ -137,9 +149,39 @@ export function PortfolioContent({ initialPortfolio }: PortfolioContentProps) {
                   <h3 className="text-3xl font-bold text-black dark:text-white mb-4 group-hover:translate-x-2 transition-transform duration-500">
                     {item.title}
                   </h3>
-                  <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light max-w-xl leading-relaxed">
+                  <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light max-w-xl leading-relaxed mb-8 line-clamp-2">
                     {item.description}
                   </p>
+                  
+                  <div className="flex items-center gap-4">
+                    <Link href={`/portfolio/${item.slug}`} className="flex items-center gap-2 text-sm font-bold text-black dark:text-white group/btn">
+                      Detail
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-2" />
+                    </Link>
+                    <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-800" />
+                    
+                    {item.previewUrl && item.previewUrl !== "#" ? (
+                      <a href={item.previewUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-bold text-neutral-500 hover:text-black dark:hover:text-white transition-colors">
+                        <Globe className="w-4 h-4" /> Demo
+                      </a>
+                    ) : (
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-300 dark:text-neutral-700 cursor-not-allowed" title="Demo tidak tersedia">
+                        <Globe className="w-4 h-4" /> Demo
+                      </div>
+                    )}
+
+                    <div className="h-4 w-px bg-neutral-200 dark:bg-neutral-800" />
+                    
+                    {item.githubUrl && item.githubUrl !== "#" ? (
+                      <a href={item.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-bold text-neutral-500 hover:text-black dark:hover:text-white transition-colors">
+                        <GitHubIcon className="w-4 h-4" /> Code
+                      </a>
+                    ) : (
+                      <div className="flex items-center gap-2 text-sm font-bold text-neutral-300 dark:text-neutral-700 cursor-not-allowed" title="Source code tidak tersedia">
+                        <GitHubIcon className="w-4 h-4" /> Code
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}

@@ -285,8 +285,8 @@ const MergedPlanes = forwardRef<
   )
 
   useFrame((_, delta) => {
-    if(mesh.current) {
-        mesh.current.material.uniforms.time.value += 0.1 * delta
+    if (mesh.current) {
+      mesh.current.material.uniforms.time.value += 0.1 * delta
     }
   })
 
@@ -466,9 +466,7 @@ const Button = ({ variant = "default", size = "sm", className = "", href, childr
   )
 }
 
-// ============================================================================
-// MAIN HERO COMPONENT
-// ============================================================================
+import { PromoBanner } from "@/components/PromoBanner";
 
 export default function EtherealBeamsHero() {
   return (
@@ -517,10 +515,10 @@ export default function EtherealBeamsHero() {
                 Lihat Layanan
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
+              <Button
                 href={`https://wa.me/6287776266539?text=${encodeURIComponent("Halo Pilcodev, saya ingin berdiskusi tentang proyek saya.")}`}
-                variant="outline" 
-                size="lg" 
+                variant="outline"
+                size="lg"
                 className="w-full sm:w-auto font-semibold bg-transparent flex items-center justify-center"
               >
                 Hubungi Kami
@@ -530,7 +528,7 @@ export default function EtherealBeamsHero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-2 sm:gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">50+</div>
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1 sm:mb-2">10+</div>
                 <div className="text-white/60 text-xs sm:text-sm">Proyek Selesai</div>
               </div>
               <div className="text-center">
@@ -548,6 +546,9 @@ export default function EtherealBeamsHero() {
 
       {/* Gradient Overlay for better text readability */}
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none" />
+      
+      {/* Promo Banner */}
+      <PromoBanner />
     </div>
   )
 }
