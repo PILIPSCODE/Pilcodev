@@ -3,9 +3,10 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, Calendar, Filter, SortDesc, SortAsc, LayoutGrid, Smartphone, Cpu, Zap, Globe, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, Calendar, Filter, SortDesc, SortAsc, LayoutGrid, Smartphone, Cpu, Zap, Globe, ArrowRight, ChevronLeft, ChevronRight, Monitor, Code2 } from "lucide-react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { GitHubIcon } from "@/components/ui/github-icon";
+import categoriesData from "@/data/categories.json";
 
 interface PortfolioItem {
   title: string;
@@ -22,14 +23,21 @@ interface PortfolioContentProps {
   initialPortfolio: PortfolioItem[];
 }
 
-const categories = ["Semua", "Website", "Mobile", "Machine Learning", "Automation"];
+const IconMap: Record<string, any> = {
+  Globe,
+  Smartphone,
+  Cpu,
+  Zap,
+  Monitor,
+  LayoutGrid,
+  Code2
+};
+
+const categories = ["Semua", ...categoriesData.map(c => c.name)];
 
 const CategoryIconMap: Record<string, any> = {
-  "Website": Globe,
-  "Mobile": Smartphone,
-  "Machine Learning": Cpu,
-  "Automation": Zap,
-  "Semua": LayoutGrid
+  "Semua": LayoutGrid,
+  ...Object.fromEntries(categoriesData.map(c => [c.name, IconMap[c.icon] || Code2]))
 };
 
 export function PortfolioContent({ initialPortfolio }: PortfolioContentProps) {

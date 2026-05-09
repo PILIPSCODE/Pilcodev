@@ -1,199 +1,5 @@
 [
   {
-    "slug": "ml-solutions",
-    "title": "Solusi Machine Learning",
-    "description": "Sistem AI dan machine learning untuk mengoptimalkan alur kerja Anda.",
-    "icon": "Cpu",
-    "price": "Mulai Dari Rp 2.500.000",
-    "intro": "Berdayakan bisnis Anda dengan sistem AI berbasis data dan model prediksi kustom.",
-    "packages": [
-      {
-        "title": "🥈 ML Starter (Prediksi / Klasifikasi)",
-        "price": "Rp 2.500.000",
-        "features": [
-          "Model sederhana (regresi / klasifikasi)",
-          "Pembersihan dataset",
-          "Pelatihan model",
-          "Output prediksi (API / script)"
-        ],
-        "benefits": [
-          "Cocok untuk skripsi / bisnis kecil",
-          "Dokumentasi dasar",
-          "Revisi 2x"
-        ]
-      },
-      {
-        "title": "🥇 ML Pro (End-to-End)",
-        "price": "Rp 5.000.000 – 10.000.000",
-        "features": [
-          "Preprocessing data (pembersihan, penanganan outlier)",
-          "Rekayasa fitur (feature engineering)",
-          "Pelatihan model + evaluasi",
-          "Deployment API"
-        ],
-        "benefits": [
-          "Model lebih akurat",
-          "Bisa diintegrasikan ke web/aplikasi",
-          "Visualisasi data",
-          "Revisi 3x"
-        ]
-      },
-      {
-        "title": "⚙️ Custom AI / ML System",
-        "price": "Mulai Dari Rp 12.000.000",
-        "features": [
-          "Model kustom (NLP / Rekomendasi / Peramalan)",
-          "Pipeline data (ETL)",
-          "Integrasi ke sistem (web/mobile)"
-        ],
-        "benefits": [
-          "Model dengan akurasi tinggi",
-          "Sistem skalabel",
-          "Mendukung real-time / batch",
-          "Source code + dokumentasi",
-          "Revisi 3x"
-        ]
-      }
-    ],
-    "outro": "",
-    "summaryFeatures": [
-      "Konsultasi Perencanaan",
-      "Pengembangan & Implementasi",
-      "Revisi Terbatas",
-      "Source Code & Aset",
-      "Dukungan Teknis"
-    ]
-  },
-  {
-    "slug": "mobile-development",
-    "title": "Pengembangan Aplikasi Mobile",
-    "description": "Aplikasi mobile lintas platform yang memukau pengguna Anda.",
-    "icon": "Smartphone",
-    "price": "Mulai Dari Rp 3.000.000",
-    "intro": "Aplikasi mobile berkualitas tinggi dan berperforma tinggi yang disesuaikan dengan kebutuhan bisnis Anda.",
-    "packages": [
-      {
-        "title": "🥈 Mobile App Starter",
-        "price": "Rp 3.000.000",
-        "features": [
-          "Aplikasi mobile (Android)",
-          "3–5 layar (Home, Login, Dashboard, dll)",
-          "Integrasi API (dasar)",
-          "UI sederhana"
-        ],
-        "benefits": [
-          "UI mobile responsif",
-          "Build cepat (APK)",
-          "Revisi 2x",
-          "Source code"
-        ]
-      },
-      {
-        "title": "🥇 Mobile App Pro",
-        "price": "Rp 6.000.000 – 10.000.000",
-        "features": [
-          "6–12 layar",
-          "Sistem autentikasi",
-          "Integrasi API (lanjutan)",
-          "Manajemen status (state management)"
-        ],
-        "benefits": [
-          "UI/UX bersih",
-          "Responsif & skalabel",
-          "Revisi 3x",
-          "Source code",
-          "Pengujian dasar"
-        ]
-      },
-      {
-        "title": "⚙️ Custom Mobile App",
-        "price": "Mulai Dari Rp 12.000.000",
-        "features": [
-          "Fitur kustom (chat, payment, maps, dll)",
-          "Integrasi backend",
-          "Sistem database"
-        ],
-        "benefits": [
-          "Full kustom sesuai kebutuhan",
-          "Bisa publish ke Play Store",
-          "Termasuk API / backend",
-          "Revisi 3x",
-          "Source code",
-          "Dukungan pemeliharaan (opsional)"
-        ]
-      }
-    ],
-    "outro": "",
-    "summaryFeatures": [
-      "Konsultasi Perencanaan",
-      "Pengembangan & Implementasi",
-      "Revisi Terbatas",
-      "Source Code & Aset",
-      "Dukungan Teknis"
-    ]
-  },
-  {
-    "slug": "automation",
-    "title": "Automation",
-    "description": "Sederhanakan operasional bisnis Anda dengan otomasi alur kerja tingkat lanjut.",
-    "icon": "Code2",
-    "price": "Mulai Dari Rp 1.500.000",
-    "intro": "Hemat waktu dan kurangi kesalahan manusia dengan mengotomatiskan alur kerja bisnis Anda.",
-    "packages": [
-      {
-        "title": "🥈 Automation Starter",
-        "price": "Rp 1.500.000",
-        "features": [
-          "1–2 otomasi alur kerja",
-          "Integrasi dasar (Webhook, Email, Google Sheet)"
-        ],
-        "benefits": [
-          "Hemat waktu kerja manual",
-          "Revisi 2x",
-          "Dokumentasi dasar"
-        ]
-      },
-      {
-        "title": "🥇 Automation Pro",
-        "price": "Rp 3.000.000 – 6.000.000",
-        "features": [
-          "3–6 alur kerja",
-          "Integrasi API (WhatsApp, CRM, dll)",
-          "Penanganan kesalahan dasar"
-        ],
-        "benefits": [
-          "Alur kerja lebih kompleks",
-          "Efisiensi bisnis meningkat",
-          "Revisi 3x"
-        ]
-      },
-      {
-        "title": "⚙️ Custom Automation System",
-        "price": "Mulai Dari Rp 7.000.000",
-        "features": [
-          "Alur kerja kompleks (multi-step)",
-          "Integrasi multi platform",
-          "Database + logika otomasi"
-        ],
-        "benefits": [
-          "Sistem otomasi penuh",
-          "Skalabel & andal",
-          "Monitoring alur kerja",
-          "Revisi 3x",
-          "Source workflow"
-        ]
-      }
-    ],
-    "outro": "",
-    "summaryFeatures": [
-      "Konsultasi Perencanaan",
-      "Pengembangan & Implementasi",
-      "Revisi Terbatas",
-      "Source Code & Aset",
-      "Dukungan Teknis"
-    ]
-  },
-  {
     "slug": "web-development",
     "title": "Pengembangan Website",
     "description": "Layanan pengembangan website kustom menggunakan Next.js dan React.",
@@ -290,6 +96,268 @@
       }
     ],
     "outro": "### Alur Kerja\n1. Pengerjaan dimulai setelah DP diberikan.\n2. Invoice.\n3. PRD (Persetujuan Klien).\n4. Isi Form Resource yang diperlukan untuk pembuatan website.\n5. Klien berlangganan VPS jika diperlukan + Beli Domain (dari Klien). (Kami akan bantu 1 on 1)\n6. Lunasi tagihan untuk setup ads jika termasuk.\n7. Semua bug pada fitur yang disepakati di PRD gratis perbaikan.\n8. Monitoring Iklan + Laporan Analitik Ads.\n9. Bisa revisi 3 kali pertama gratis.\n",
+    "summaryFeatures": [
+      "Konsultasi Perencanaan",
+      "Pengembangan & Implementasi",
+      "Revisi Terbatas",
+      "Source Code & Aset",
+      "Dukungan Teknis"
+    ]
+  },
+  {
+    "slug": "mobile-development",
+    "title": "Pengembangan Aplikasi Mobile",
+    "description": "Aplikasi mobile lintas platform yang memukau pengguna Anda.",
+    "icon": "Smartphone",
+    "price": "Mulai Dari Rp 3.000.000",
+    "intro": "Aplikasi mobile berkualitas tinggi dan berperforma tinggi yang disesuaikan dengan kebutuhan bisnis Anda.",
+    "packages": [
+      {
+        "title": "🥈 Mobile App Starter",
+        "price": "Rp 3.000.000",
+        "features": [
+          "Aplikasi mobile (Android)",
+          "3–5 layar (Home, Login, Dashboard, dll)",
+          "Integrasi API (dasar)",
+          "UI sederhana"
+        ],
+        "benefits": [
+          "UI mobile responsif",
+          "Build cepat (APK)",
+          "Revisi 2x",
+          "Source code"
+        ]
+      },
+      {
+        "title": "🥇 Mobile App Pro",
+        "price": "Rp 6.000.000 – 10.000.000",
+        "features": [
+          "6–12 layar",
+          "Sistem autentikasi",
+          "Integrasi API (lanjutan)",
+          "Manajemen status (state management)"
+        ],
+        "benefits": [
+          "UI/UX bersih",
+          "Responsif & skalabel",
+          "Revisi 3x",
+          "Source code",
+          "Pengujian dasar"
+        ]
+      },
+      {
+        "title": "⚙️ Custom Mobile App",
+        "price": "Mulai Dari Rp 12.000.000",
+        "features": [
+          "Fitur kustom (chat, payment, maps, dll)",
+          "Integrasi backend",
+          "Sistem database"
+        ],
+        "benefits": [
+          "Full kustom sesuai kebutuhan",
+          "Bisa publish ke Play Store",
+          "Termasuk API / backend",
+          "Revisi 3x",
+          "Source code",
+          "Dukungan pemeliharaan (opsional)"
+        ]
+      }
+    ],
+    "outro": "",
+    "summaryFeatures": [
+      "Konsultasi Perencanaan",
+      "Pengembangan & Implementasi",
+      "Revisi Terbatas",
+      "Source Code & Aset",
+      "Dukungan Teknis"
+    ]
+  },
+  {
+    "slug": "desktop-development",
+    "title": "Pengembangan Aplikasi Desktop",
+    "description": "Solusi aplikasi desktop yang kuat dan efisien untuk Windows, macOS, dan Linux.",
+    "icon": "Monitor",
+    "price": "Mulai Dari Rp 4.000.000",
+    "intro": "Bangun aplikasi desktop berperforma tinggi dengan fitur kustom yang dioptimalkan untuk produktivitas dan alur kerja bisnis Anda.",
+    "packages": [
+      {
+        "title": "🥈 Desktop Starter",
+        "price": "Rp 4.000.000",
+        "features": [
+          "Aplikasi Desktop (Windows/macOS/Linux)",
+          "Antarmuka pengguna dasar",
+          "Penyimpanan data lokal",
+          "Satu platform target"
+        ],
+        "benefits": [
+          "Instalasi mandiri",
+          "Performa tinggi",
+          "Revisi 2x",
+          "Source code"
+        ]
+      },
+      {
+        "title": "🥇 Desktop Pro",
+        "price": "Rp 8.000.000 – 15.000.000",
+        "features": [
+          "Aplikasi Lintas Platform",
+          "Integrasi Database Cloud/Lokal",
+          "Sistem Autentikasi & Keamanan",
+          "Ekspor Laporan (PDF/Excel)"
+        ],
+        "benefits": [
+          "UI/UX Modern",
+          "Sinkronisasi data otomatis",
+          "Revisi 3x",
+          "Source code",
+          "Dukungan multi-platform"
+        ]
+      },
+      {
+        "title": "⚙️ Custom Desktop Solution",
+        "price": "Mulai Dari Rp 18.000.000",
+        "features": [
+          "Fitur kompleks kustom",
+          "Integrasi perangkat keras (printer, scanner, dll)",
+          "Sistem manajemen inventaris/ERP",
+          "Otomasi proses bisnis berat"
+        ],
+        "benefits": [
+          "Kustomisasi total",
+          "Keamanan tingkat tinggi",
+          "Pelatihan penggunaan",
+          "Revisi 3x",
+          "Dukungan pemeliharaan"
+        ]
+      }
+    ],
+    "outro": "",
+    "summaryFeatures": [
+      "Konsultasi Perencanaan",
+      "Pengembangan & Implementasi",
+      "Revisi Terbatas",
+      "Source Code & Aset",
+      "Dukungan Teknis"
+    ]
+  },
+  {
+    "slug": "ml-solutions",
+    "title": "Solusi Machine Learning",
+    "description": "Sistem AI dan machine learning untuk mengoptimalkan alur kerja Anda.",
+    "icon": "Cpu",
+    "price": "Mulai Dari Rp 2.500.000",
+    "intro": "Berdayakan bisnis Anda dengan sistem AI berbasis data dan model prediksi kustom.",
+    "packages": [
+      {
+        "title": "🥈 ML Starter (Prediksi / Klasifikasi)",
+        "price": "Rp 2.500.000",
+        "features": [
+          "Model sederhana (regresi / klasifikasi)",
+          "Pembersihan dataset",
+          "Pelatihan model",
+          "Output prediksi (API / script)"
+        ],
+        "benefits": [
+          "Cocok untuk skripsi / bisnis kecil",
+          "Dokumentasi dasar",
+          "Revisi 2x"
+        ]
+      },
+      {
+        "title": "🥇 ML Pro (End-to-End)",
+        "price": "Rp 5.000.000 – 10.000.000",
+        "features": [
+          "Preprocessing data (pembersihan, penanganan outlier)",
+          "Rekayasa fitur (feature engineering)",
+          "Pelatihan model + evaluasi",
+          "Deployment API"
+        ],
+        "benefits": [
+          "Model lebih akurat",
+          "Bisa diintegrasikan ke web/aplikasi",
+          "Visualisasi data",
+          "Revisi 3x"
+        ]
+      },
+      {
+        "title": "⚙️ Custom AI / ML System",
+        "price": "Mulai Dari Rp 12.000.000",
+        "features": [
+          "Model kustom (NLP / Rekomendasi / Peramalan)",
+          "Pipeline data (ETL)",
+          "Integrasi ke sistem (web/mobile)"
+        ],
+        "benefits": [
+          "Model dengan akurasi tinggi",
+          "Sistem skalabel",
+          "Mendukung real-time / batch",
+          "Source code + dokumentasi",
+          "Revisi 3x"
+        ]
+      }
+    ],
+    "outro": "",
+    "summaryFeatures": [
+      "Konsultasi Perencanaan",
+      "Pengembangan & Implementasi",
+      "Revisi Terbatas",
+      "Source Code & Aset",
+      "Dukungan Teknis"
+    ]
+  },
+  {
+    "slug": "automation",
+    "title": "Automation",
+    "description": "Sederhanakan operasional bisnis Anda dengan otomasi alur kerja tingkat lanjut.",
+    "icon": "Code2",
+    "price": "Mulai Dari Rp 1.500.000",
+    "intro": "Hemat waktu dan kurangi kesalahan manusia dengan mengotomatiskan alur kerja bisnis Anda.",
+    "packages": [
+      {
+        "title": "🥈 Automation Starter",
+        "price": "Rp 1.500.000",
+        "features": [
+          "1–2 otomasi alur kerja",
+          "Integrasi dasar (Webhook, Email, Google Sheet)"
+        ],
+        "benefits": [
+          "Hemat waktu kerja manual",
+          "Revisi 2x",
+          "Dokumentasi dasar"
+        ]
+      },
+      {
+        "title": "🥇 Automation Pro",
+        "price": "Rp 3.000.000 – 6.000.000",
+        "features": [
+          "3–6 alur kerja",
+          "Integrasi API (WhatsApp, CRM, dll)",
+          "Penanganan kesalahan dasar"
+        ],
+        "benefits": [
+          "Alur kerja lebih kompleks",
+          "Efisiensi bisnis meningkat",
+          "Revisi 3x"
+        ]
+      },
+      {
+        "title": "⚙️ Custom Automation System",
+        "price": "Mulai Dari Rp 7.000.000",
+        "features": [
+          "Alur kerja kompleks (multi-step)",
+          "Integrasi multi platform",
+          "Database + logika otomasi"
+        ],
+        "benefits": [
+          "Sistem otomasi penuh",
+          "Skalabel & andal",
+          "Monitoring alur kerja",
+          "Revisi 3x",
+          "Source workflow"
+        ]
+      }
+    ],
+    "outro": "",
     "summaryFeatures": [
       "Konsultasi Perencanaan",
       "Pengembangan & Implementasi",

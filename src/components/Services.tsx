@@ -3,7 +3,7 @@
 import { cn } from '@/lib/utils';
 import { Button, buttonVariants } from '@/components/ui/button';
 import * as PricingCard from '@/components/ui/pricing-card';
-import { CheckCircle2, Globe, Smartphone, Cpu, Code2, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Globe, Smartphone, Cpu, Code2, ArrowRight, Monitor } from 'lucide-react';
 import Link from 'next/link';
 
 const IconMap: Record<string, any> = {
@@ -11,6 +11,7 @@ const IconMap: Record<string, any> = {
   Smartphone,
   Cpu,
   Code2,
+  Monitor,
 };
 
 // Generic features if none are specified
@@ -33,7 +34,7 @@ export function Services({ services = [] }: { services?: any[] }) {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 place-items-center md:place-items-stretch">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 place-items-center md:place-items-stretch">
             {services.map((service, index) => {
                 const Icon = service.icon && IconMap[service.icon] 
                   ? IconMap[service.icon] 

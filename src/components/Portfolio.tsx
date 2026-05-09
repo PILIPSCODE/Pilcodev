@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import portfolio from "@/data/portfolio.json";
+import categoriesData from "@/data/categories.json";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Globe } from "lucide-react";
@@ -12,7 +13,7 @@ export function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("Semua");
 
   const projects = [...portfolio].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-  const filters = ["Semua", "Website", "Machine Learning", "Automation", "Mobile"];
+  const filters = ["Semua", ...categoriesData.map(c => c.name)];
 
   const filteredProjects = (activeFilter === "Semua"
     ? projects

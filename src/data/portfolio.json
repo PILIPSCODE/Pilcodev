@@ -168,5 +168,15 @@
     "slug": "diabetes-classification",
     "readme": "portfolio/diabetes-classification",
     "githubUrl": "https://github.com/PILIPSCODE/Obesity_Classification"
+  },
+  {
+    "title": "Tarot Live tiktok",
+    "category": "Desktop App",
+    "description": "Desktop app untuk live tarot di tiktok",
+    "date": "2026-04-01",
+    "image": "https://i.ibb.co.com/jv3hjH33/image.jpg",
+    "slug": "tarot-live-tiktok",
+    "readme": "portfolio/tarot-live-tiktok",
+    "githubUrl": "https://github.com/PILIPSCODE/tiktoktarotprediction-livetools-"
   }
 ]

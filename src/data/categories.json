@@ -1,0 +1,7 @@
+[
+  { "name": "Website", "icon": "Globe" },
+  { "name": "Mobile", "icon": "Smartphone" },
+  { "name": "Machine Learning", "icon": "Cpu" },
+  { "name": "Automation", "icon": "Zap" },
+  { "name": "Desktop App", "icon": "Monitor" }
+]
