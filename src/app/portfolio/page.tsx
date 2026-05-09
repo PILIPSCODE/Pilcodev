@@ -1,6 +1,7 @@
 import portfolio from "@/data/portfolio.json";
 import { PortfolioContent } from "./PortfolioContent";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Portofolio | Pilcodev",
@@ -8,5 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function PortfolioPage() {
-  return <PortfolioContent initialPortfolio={portfolio} />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white dark:bg-black" />}>
+      <PortfolioContent initialPortfolio={portfolio} />
+    </Suspense>
+  );
 }

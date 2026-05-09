@@ -1,6 +1,7 @@
 import { getMarkdownFiles } from "@/lib/markdown";
 import { BlogContent } from "./BlogContent";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Artikel & Wawasan | Pilcodev",
@@ -15,5 +16,9 @@ export default function BlogPage() {
     return new Date(b.frontmatter.date).getTime() - new Date(a.frontmatter.date).getTime();
   });
 
-  return <BlogContent initialPosts={sortedPosts} />;
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-white dark:bg-black" />}>
+      <BlogContent initialPosts={sortedPosts} />
+    </Suspense>
+  );
 }
