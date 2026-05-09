@@ -53,7 +53,7 @@
     "title": "Website Perumahan",
     "category": "Website",
     "description": "Landing page untuk menampilkan rumah yang dijual",
-    "date": "2025-05-01",
+    "date": "2025-02-01",
     "image": "https://i.ibb.co.com/4g3WQMk2/image.jpg",
     "slug": "website-perumahan",
     "readme": "portfolio/website-perumahan",
@@ -68,6 +68,105 @@
     "slug": "joki-tugas",
     "readme": "portfolio/joki-tugas",
     "previewUrl": "https://hungerappsss.netlify.app/"
+  },
+  {
+    "title": "A3trans",
+    "category": "Website",
+    "description": "Website untuk rental mobil A3 Trans",
+    "date": "2025-10-10",
+    "image": "https://i.ibb.co.com/qLDWwGTM/image.png",
+    "slug": "a3trans",
+    "readme": "portfolio/a3trans",
+    "previewUrl": "https://a3trans.my.id"
+  },
+  {
+    "title": "Klasifikasi Gambar Shoe, Sandal, Boot",
+    "category": "Machine Learning",
+    "description": "Klasifikasi Gambar Shoe, Sandal, Boot Menggunakan Metode Convolutional Neural Network",
+    "date": "2025-03-01",
+    "image": "https://i.ibb.co.com/Z6QcSsts/image.png",
+    "slug": "klasifikasi-sepatu",
+    "readme": "portfolio/klasifikasi-sepatu",
+    "githubUrl": "https://github.com/PILIPSCODE/-Image-Classification-Shoe-Sandal-Boot"
+  },
+  {
+    "title": "Klasifikasi Gambar Buah",
+    "category": "Machine Learning",
+    "description": "Klasifikasi Gambar Buah Menggunakan Metode Convolutional Neural Network",
+    "date": "2025-05-01",
+    "image": "https://i.ibb.co.com/gZD5d4cb/pngtree-many-fruits-are-placed-next-to-each-other-in-different-piles-image-2972213.jpg",
+    "slug": "klasifikasi-buah",
+    "readme": "portfolio/klasifikasi-buah",
+    "githubUrl": "https://github.com/PILIPSCODE/Image-Fruit-Classification"
+  },
+  {
+    "title": "Sentiment Analysis Toko Crypto",
+    "category": "Machine Learning",
+    "description": "Sentiment Analysis Toko Crypto untuk joki tugas kuliah",
+    "date": "2025-02-03",
+    "image": "https://i.ibb.co.com/whntLykn/image.png",
+    "slug": "sentiment-analysis-toko-crypto",
+    "readme": "portfolio/sentiment-analysis-toko-crypto",
+    "githubUrl": "https://github.com/PILIPSCODE/TokoCrypto-Google-Play-Sentiment-Analyst"
+  },
+  {
+    "title": "Sentiment Analysis Dana",
+    "category": "Machine Learning",
+    "description": "Sentiment Analysis Dana untuk joki tugas kuliah",
+    "date": "2025-02-10",
+    "image": "https://i.ibb.co.com/TqRfPZTK/image.png",
+    "slug": "sentiment-analysis-dana",
+    "readme": "portfolio/sentiment-analysis-dana",
+    "githubUrl": "https://github.com/PILIPSCODE/Dana-Google-Play-Sentiment-Analyst"
+  },
+  {
+    "title": "Sistem Rekomendasi Anime",
+    "category": "Machine Learning",
+    "description": "Sistem Rekomendasi Anime",
+    "date": "2025-04-01",
+    "image": "https://i.ibb.co.com/9kSGk0PF/4446627.jpg",
+    "slug": "sistem-rekomendasi-anime",
+    "readme": "portfolio/sistem-rekomendasi-anime",
+    "githubUrl": "https://github.com/PILIPSCODE/Sistem-rekomendasi-anime-berdasarkan-genre"
+  },
+  {
+    "title": "Predictive Dropout Rate Jaya-Jaya Maju",
+    "category": "Machine Learning",
+    "description": "Model Predictive dengan machine learning untuk mengidentifikasi siswa yang berpotensi akan di dropout.",
+    "date": "2025-06-01",
+    "image": "https://i.ibb.co.com/y7PmcYH/image.png",
+    "slug": "predictive-dropout-rate-jaya-jaya-maju",
+    "readme": "portfolio/predictive-dropout-rate-jaya-jaya-maju",
+    "githubUrl": "https://github.com/PILIPSCODE/Analytics-and-Prediction-Dropout-Rate-Jaya-Jaya-Institut"
+  },
+  {
+    "title": "Predictive Attrition Rate Jaya-Jaya Maju",
+    "category": "Machine Learning",
+    "description": "Model Predictive dengan machine learning untuk mengidentifikasi karyawan yang berpotensi keluar.",
+    "date": "2025-06-01",
+    "image": "https://i.ibb.co.com/N2cL71Ts/image.png",
+    "slug": "predictive-attrition-rate-jaya-jaya-maju",
+    "readme": "portfolio/predictive-attrition-rate-jaya-jaya-maju",
+    "githubUrl": "https://github.com/PILIPSCODE/Analytics-and-Prediction-Atrition-Rate-Jaya-Jaya-Maju"
+  },
+  {
+    "title": "Heart Deasease Classification",
+    "category": "Machine Learning",
+    "description": "Model Klasifikasi penyakit jantung menggunakan dataset dari UCI Machine Learning Repository untuk memprediksi kemungkinan penyakit jantung berdasarkan berbagai parameter kesehatan.",
+    "date": "2025-08-01",
+    "image": "https://i.ibb.co.com/CKDV0zXX/image.png",
+    "slug": "heart-deasease-classification",
+    "readme": "portfolio/heart-deasease-classification",
+    "githubUrl": "https://github.com/PILIPSCODE/Heart_Deasease_Prediction_-Backend-"
+  },
+  {
+    "title": "Diabetes Classification",
+    "category": "Machine Learning",
+    "description": "Model Klasifikasi penyakit diabetes menggunakan dataset dari Kaggle untuk memprediksi kemungkinan penyakit diabetes berdasarkan berbagai parameter kesehatan.",
+    "date": "2025-07-01",
+    "image": "https://i.ibb.co.com/MxjTds1v/image.png",
+    "slug": "diabetes-classification",
+    "readme": "portfolio/diabetes-classification",
+    "githubUrl": "https://github.com/PILIPSCODE/Obesity_Classification"
   }
-  
 ]

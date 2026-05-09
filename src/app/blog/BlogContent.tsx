@@ -1,9 +1,10 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, Calendar, ArrowRight, Filter, SortDesc, SortAsc } from "lucide-react";
+import { Search, Calendar, ArrowRight, Filter, SortDesc, SortAsc, ChevronLeft, ChevronRight } from "lucide-react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { MarkdownDocument } from "@/lib/markdown";
 
 interface BlogContentProps {
@@ -19,8 +20,8 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
       title: post.frontmatter.title,
       category: post.frontmatter.category || "General",
       date: post.frontmatter.date,
-      image: post.frontmatter.image && post.frontmatter.image !== "" 
-        ? post.frontmatter.image 
+      image: post.frontmatter.image && post.frontmatter.image !== ""
+        ? post.frontmatter.image
         : "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=600&auto=format&fit=crop",
       description: post.frontmatter.description,
       slug: `/blog/${post.slug}`
@@ -28,7 +29,7 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
   }, [initialPosts]);
 
   const filteredAndSortedPosts = useMemo(() => {
-    let result = posts.filter(post => 
+    let result = posts.filter(post =>
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.category.toLowerCase().includes(searchQuery.toLowerCase())
@@ -42,6 +43,46 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
 
     return result;
   }, [posts, searchQuery, sortOrder]);
+
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const ITEMS_PER_PAGE = 10;
+
+  const currentPage = useMemo(() => {
+    const page = searchParams.get("page");
+    return page ? Math.max(1, parseInt(page)) : 1;
+  }, [searchParams]);
+
+  // Use ref to track previous search value
+  const prevSearchRef = useRef(searchQuery);
+
+  useEffect(() => {
+    // Only reset to page 1 if search actually changed
+    if (prevSearchRef.current !== searchQuery) {
+      prevSearchRef.current = searchQuery;
+
+      const params = new URLSearchParams(searchParams.toString());
+      if (params.get("page") !== "1") {
+        params.set("page", "1");
+        router.push(`?${params.toString()}`, { scroll: false });
+      }
+    }
+  }, [searchQuery, router, searchParams]);
+
+  const totalPages = Math.ceil(filteredAndSortedPosts.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedPosts = filteredAndSortedPosts.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const handlePageChange = (page: number) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set("page", page.toString());
+    router.push(`?${params.toString()}`, { scroll: false });
+
+    const gridElement = document.getElementById("blog-grid");
+    if (gridElement) {
+      gridElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   return (
     <main className="min-h-screen bg-white dark:bg-black pt-32 pb-24 transition-colors duration-300">
@@ -60,9 +101,9 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
         <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between">
           <div className="relative w-full md:max-w-md group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 transition-colors group-focus-within:text-black dark:group-focus-within:text-white" />
-            <input 
-              type="text" 
-              placeholder="Cari artikel..." 
+            <input
+              type="text"
+              placeholder="Cari artikel..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-neutral-100 dark:bg-neutral-900 border-none rounded-2xl py-4 pl-12 pr-6 text-black dark:text-white focus:ring-2 focus:ring-black dark:focus:ring-white transition-all outline-none"
@@ -70,7 +111,7 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
           </div>
 
           <div className="flex items-center gap-4 w-full md:w-auto">
-            <button 
+            <button
               onClick={() => setSortOrder(sortOrder === "desc" ? "asc" : "desc")}
               className="flex items-center gap-2 px-6 py-4 bg-neutral-100 dark:bg-neutral-900 rounded-2xl text-sm font-medium hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
             >
@@ -81,13 +122,13 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
         </div>
 
         {/* Grid Section */}
-        {filteredAndSortedPosts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredAndSortedPosts.map((post, i) => (
+        {paginatedPosts.length > 0 ? (
+          <div id="blog-grid" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {paginatedPosts.map((post, i) => (
               <Link key={i} href={post.slug} className="group flex flex-col bg-white dark:bg-black rounded-[2.5rem] overflow-hidden border border-neutral-200 dark:border-neutral-900 shadow-sm hover:shadow-2xl dark:shadow-[0_0_50px_rgba(255,255,255,0.03)] transition-all duration-500 hover:-translate-y-3">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <Image 
-                    src={post.image} 
+                  <Image
+                    src={post.image}
                     alt={post.title}
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
@@ -122,6 +163,48 @@ export function BlogContent({ initialPosts }: BlogContentProps) {
             </div>
             <h3 className="text-2xl font-medium mb-2 text-black dark:text-white">Tidak ada hasil ditemukan</h3>
             <p className="text-neutral-500 dark:text-neutral-500">Coba gunakan kata kunci pencarian yang berbeda.</p>
+          </div>
+        )}
+
+        {/* Pagination Section */}
+        {totalPages > 1 && (
+          <div className="mt-24 flex flex-col items-center gap-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+                className="w-12 h-12 flex items-center justify-center rounded-2xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all active:scale-90"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              <div className="flex items-center gap-2">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={`w-12 h-12 flex items-center justify-center rounded-2xl text-sm font-bold transition-all active:scale-90 ${currentPage === page
+                        ? "bg-black dark:bg-white text-white dark:text-black shadow-xl"
+                        : "bg-neutral-100 dark:bg-neutral-900 text-neutral-500 hover:text-black dark:hover:text-white hover:bg-neutral-200 dark:hover:bg-neutral-800"
+                      }`}
+                  >
+                    {page}
+                  </button>
+                ))}
+              </div>
+
+              <button
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+                className="w-12 h-12 flex items-center justify-center rounded-2xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white disabled:opacity-30 disabled:cursor-not-allowed hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-all active:scale-90"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            <p className="text-sm font-medium text-neutral-500 dark:text-neutral-500 tracking-wide uppercase">
+              Menampilkan <span className="text-black dark:text-white">{startIndex + 1}</span> - <span className="text-black dark:text-white">{Math.min(startIndex + ITEMS_PER_PAGE, filteredAndSortedPosts.length)}</span> Dari <span className="text-black dark:text-white">{filteredAndSortedPosts.length}</span> Artikel
+            </p>
           </div>
         )}
       </div>

@@ -23,6 +23,17 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
   // Use scrolled state or if not on home page, force solid background
   const isSolid = scrolled || !isHome;
 
@@ -104,27 +115,71 @@ export function Header() {
           </button>
         </div>
 
-        {/* Mobile Nav Overlay */}
+        {/* Mobile Sidebar Overlay */}
         <div 
           className={cn(
-            "absolute top-full left-0 right-0 p-6 bg-white dark:bg-neutral-950 border-b border-neutral-200 dark:border-neutral-800 shadow-xl flex flex-col gap-6 transition-all duration-300 origin-top",
-            isMenuOpen ? "opacity-100 scale-y-100 pointer-events-auto" : "opacity-0 scale-y-0 pointer-events-none"
+            "fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] transition-opacity duration-500 md:hidden pointer-events-none",
+            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0"
+          )}
+          onClick={() => setIsMenuOpen(false)}
+        />
+
+        {/* Mobile Sidebar */}
+        <div 
+          className={cn(
+            "fixed top-0 right-0 bottom-0 w-[300px] bg-white dark:bg-neutral-950 z-[70] p-8 flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.32,0,0.67,0)] md:hidden shadow-2xl",
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
           )}
         >
-          <nav className="flex flex-col gap-4 text-center">
-            <Link onClick={() => setIsMenuOpen(false)} href="/about" className="text-lg font-medium text-black dark:text-white">Tentang Kami</Link>
-            <Link onClick={() => setIsMenuOpen(false)} href="/#portfolio" className="text-lg font-medium text-black dark:text-white">Portofolio</Link>
-            <Link onClick={() => setIsMenuOpen(false)} href="/#services" className="text-lg font-medium text-black dark:text-white">Harga & Layanan</Link>
-            <Link onClick={() => setIsMenuOpen(false)} href="/#testimonials" className="text-lg font-medium text-black dark:text-white">Testimoni</Link>
-            <Link onClick={() => setIsMenuOpen(false)} href="/#blog" className="text-lg font-medium text-black dark:text-white">Artikel</Link>
+          <div className="flex items-center justify-between mb-10">
+            <span className="text-2xl font-extrabold tracking-tighter dark:text-white text-black">
+              Pilcodev<span className="text-neutral-500">.</span>
+            </span>
+            <div className="flex items-center gap-2">
+              <ThemeToggle 
+                className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white" 
+              />
+              <button 
+                onClick={() => setIsMenuOpen(false)} 
+                className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white transition-transform active:scale-90"
+                aria-label="Close Menu"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+
+          <nav className="flex flex-col gap-1">
+            {[
+              { name: "Tentang Kami", href: "/about" },
+              { name: "Portofolio", href: "/#portfolio" },
+              { name: "Harga & Layanan", href: "/#services" },
+              { name: "Testimoni", href: "/#testimonials" },
+              { name: "Artikel", href: "/#blog" },
+            ].map((item) => (
+              <Link 
+                key={item.name}
+                onClick={() => setIsMenuOpen(false)} 
+                href={item.href} 
+                className="text-lg font-semibold py-4 border-b border-neutral-100 dark:border-neutral-900 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors"
+              >
+                {item.name}
+              </Link>
+            ))}
           </nav>
-          <Link 
-            onClick={() => setIsMenuOpen(false)}
-            href={`https://wa.me/6287776266539?text=${encodeURIComponent("Halo Pilcodev, saya ingin berdiskusi tentang proyek saya.")}`}
-            className="w-full text-center px-5 py-3 text-sm font-medium rounded-full bg-black text-white dark:bg-white dark:text-black"
-          >
-            Mari Berdiskusi
-          </Link>
+          
+          <div className="mt-auto pt-8">
+            <Link 
+              onClick={() => setIsMenuOpen(false)}
+              href={`https://wa.me/6287776266539?text=${encodeURIComponent("Halo Pilcodev, saya ingin berdiskusi tentang proyek saya.")}`}
+              className="w-full inline-block text-center px-5 py-4 text-sm font-bold rounded-2xl bg-black text-white dark:bg-white dark:text-black shadow-lg active:scale-95 transition-transform"
+            >
+              Mari Berdiskusi
+            </Link>
+            <p className="text-center text-[10px] text-neutral-500 mt-6 uppercase tracking-widest font-medium">
+              © {new Date().getFullYear()} Pilcodev Studio
+            </p>
+          </div>
         </div>
       </header>
     </div>
