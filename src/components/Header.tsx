@@ -40,7 +40,7 @@ export function Header() {
   return (
     <div className={cn(
       "fixed top-0 left-0 right-0 pointer-events-none transition-all duration-300",
-      isMenuOpen ? "z-[150]" : "z-50"
+      isMenuOpen ? "z-[150] bottom-0" : "z-50"
     )}>
       <header 
         className={cn(
@@ -131,7 +131,7 @@ export function Header() {
       {/* Mobile Sidebar */}
       <div 
         className={cn(
-          "fixed top-0 right-0 bottom-0 w-[300px] bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl z-[70] p-8 flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.32,0,0.67,0)] md:hidden shadow-2xl",
+          "fixed top-0 right-0 bottom-0 w-[300px] bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl z-[70] p-8 flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.32,0,0.67,0)] md:hidden shadow-2xl pointer-events-auto",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >
@@ -163,9 +163,13 @@ export function Header() {
           ].map((item) => (
             <Link 
               key={item.name}
-              onClick={() => setIsMenuOpen(false)} 
+              onClick={() => {
+                setIsMenuOpen(false);
+                // Ensure overflow is restored immediately to allow scroll
+                document.body.style.overflow = "";
+              }} 
               href={item.href} 
-              className="text-lg font-semibold py-4 border-b border-neutral-100 dark:border-neutral-900 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors"
+              className="block w-full text-lg font-semibold py-4 border-b border-neutral-100 dark:border-neutral-900 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors cursor-pointer relative z-10"
             >
               {item.name}
             </Link>
@@ -174,7 +178,10 @@ export function Header() {
         
         <div className="mt-auto pt-8">
           <Link 
-            onClick={() => setIsMenuOpen(false)}
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = "";
+            }}
             href={`https://wa.me/6287776266539?text=${encodeURIComponent("Halo Pilcodev, saya ingin berdiskusi tentang proyek saya.")}`}
             className="w-full inline-block text-center px-5 py-4 text-sm font-bold rounded-2xl bg-black text-white dark:bg-white dark:text-black shadow-lg active:scale-95 transition-transform"
           >
