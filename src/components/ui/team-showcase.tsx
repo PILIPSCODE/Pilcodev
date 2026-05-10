@@ -149,11 +149,13 @@ const PhotoCard = memo(({
       {/* Decorative inner glow on hover */}
       <div className={cn(
         "absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 transition-opacity duration-500 z-10",
-        isActive ? "opacity-100" : ""
+      isActive ? "opacity-100" : ""
       )} />
     </div>
   );
 });
+
+PhotoCard.displayName = "PhotoCard";
 
 /* ─────────────────────────────────────────
    Member name section
@@ -271,4 +273,6 @@ const MemberRow = memo(({
     </div>
   );
 });
+
+MemberRow.displayName = "MemberRow";
 

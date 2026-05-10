@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useRef } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Search, Calendar, Filter, SortDesc, SortAsc, LayoutGrid, Smartphone, Cpu, Zap, Globe, ArrowRight, ChevronLeft, ChevronRight, Monitor, Code2 } from "lucide-react";
@@ -48,7 +48,7 @@ export function PortfolioContent({ initialPortfolio }: PortfolioContentProps) {
   const router = useRouter();
 
   // Unified function to update URL params
-  const updateURL = (category: string, page: number) => {
+  const updateURL = useCallback((category: string, page: number) => {
     const params = new URLSearchParams();
     if (category !== "Semua") {
       // User specifically requested quotes in the query param: ?category="Website"
@@ -56,7 +56,7 @@ export function PortfolioContent({ initialPortfolio }: PortfolioContentProps) {
     }
     params.set("page", page.toString());
     router.push(`?${params.toString()}`, { scroll: false });
-  };
+  }, [router]);
 
   // Single source of truth for category from URL
   const activeCategory = useMemo(() => {
@@ -99,7 +99,7 @@ export function PortfolioContent({ initialPortfolio }: PortfolioContentProps) {
       prevSearchRef.current = searchQuery;
       updateURL(activeCategory, 1);
     }
-  }, [searchQuery, activeCategory]);
+  }, [searchQuery, activeCategory, updateURL]);
 
   const totalPages = Math.ceil(filteredAndSortedPortfolio.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
