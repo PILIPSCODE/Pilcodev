@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -111,11 +113,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-neutral-100 dark:border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="text-neutral-500 dark:text-neutral-500 text-sm font-light flex items-center gap-2">
-            © {new Date().getFullYear()} Pilcodev. Hak cipta dilindungi undang-undang.
+        <div className="pt-8 border-t border-neutral-100 dark:border-neutral-900 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+          <div className="text-neutral-500 dark:text-neutral-500 text-sm font-light">
+            © {new Date().getFullYear()} Pilcodev Studio. <span className="block sm:inline">Hak cipta dilindungi undang-undang.</span>
           </div>
-          <div className="flex gap-8 text-sm font-light">
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm font-light">
             <Link href="#" className="text-neutral-500 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors">Kebijakan Privasi</Link>
             <Link href="#" className="text-neutral-500 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors">Syarat & Ketentuan</Link>
             <Link href="#" className="text-neutral-500 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors">Site Map</Link>

@@ -38,7 +38,10 @@ export function Header() {
   const isSolid = scrolled || !isHome;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 pointer-events-none transition-all duration-300">
+    <div className={cn(
+      "fixed top-0 left-0 right-0 pointer-events-none transition-all duration-300",
+      isMenuOpen ? "z-[150]" : "z-50"
+    )}>
       <header 
         className={cn(
           "pointer-events-auto flex items-center justify-between px-6 md:px-12 py-4 w-full transition-all duration-300 relative",
@@ -114,74 +117,74 @@ export function Header() {
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+      </header>
 
-        {/* Mobile Sidebar Overlay */}
-        <div 
-          className={cn(
-            "fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] transition-opacity duration-500 md:hidden pointer-events-none",
-            isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0"
-          )}
-          onClick={() => setIsMenuOpen(false)}
-        />
+      {/* Mobile Sidebar Overlay */}
+      <div 
+        className={cn(
+          "fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] transition-opacity duration-500 md:hidden pointer-events-none",
+          isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0"
+        )}
+        onClick={() => setIsMenuOpen(false)}
+      />
 
-        {/* Mobile Sidebar */}
-        <div 
-          className={cn(
-            "fixed top-0 right-0 bottom-0 w-[300px] bg-white dark:bg-neutral-950 z-[70] p-8 flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.32,0,0.67,0)] md:hidden shadow-2xl",
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          )}
-        >
-          <div className="flex items-center justify-between mb-10">
-            <span className="text-2xl font-extrabold tracking-tighter dark:text-white text-black">
-              Pilcodev<span className="text-neutral-500">.</span>
-            </span>
-            <div className="flex items-center gap-2">
-              <ThemeToggle 
-                className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white" 
-              />
-              <button 
-                onClick={() => setIsMenuOpen(false)} 
-                className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white transition-transform active:scale-90"
-                aria-label="Close Menu"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-
-          <nav className="flex flex-col gap-1">
-            {[
-              { name: "Tentang Kami", href: "/about" },
-              { name: "Portofolio", href: "/#portfolio" },
-              { name: "Harga & Layanan", href: "/#services" },
-              { name: "Testimoni", href: "/#testimonials" },
-              { name: "Artikel", href: "/#blog" },
-            ].map((item) => (
-              <Link 
-                key={item.name}
-                onClick={() => setIsMenuOpen(false)} 
-                href={item.href} 
-                className="text-lg font-semibold py-4 border-b border-neutral-100 dark:border-neutral-900 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-          
-          <div className="mt-auto pt-8">
-            <Link 
-              onClick={() => setIsMenuOpen(false)}
-              href={`https://wa.me/6287776266539?text=${encodeURIComponent("Halo Pilcodev, saya ingin berdiskusi tentang proyek saya.")}`}
-              className="w-full inline-block text-center px-5 py-4 text-sm font-bold rounded-2xl bg-black text-white dark:bg-white dark:text-black shadow-lg active:scale-95 transition-transform"
+      {/* Mobile Sidebar */}
+      <div 
+        className={cn(
+          "fixed top-0 right-0 bottom-0 w-[300px] bg-white/90 dark:bg-neutral-950/90 backdrop-blur-xl z-[70] p-8 flex flex-col transition-transform duration-500 ease-[cubic-bezier(0.32,0,0.67,0)] md:hidden shadow-2xl",
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
+        <div className="flex items-center justify-between mb-10">
+          <span className="text-2xl font-extrabold tracking-tighter dark:text-white text-black">
+            Pilcodev<span className="text-neutral-500">.</span>
+          </span>
+          <div className="flex items-center gap-2">
+            <ThemeToggle 
+              className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white" 
+            />
+            <button 
+              onClick={() => setIsMenuOpen(false)} 
+              className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-900 text-black dark:text-white transition-transform active:scale-90"
+              aria-label="Close Menu"
             >
-              Mari Berdiskusi
-            </Link>
-            <p className="text-center text-[10px] text-neutral-500 mt-6 uppercase tracking-widest font-medium">
-              © {new Date().getFullYear()} Pilcodev Studio
-            </p>
+              <X className="w-5 h-5" />
+            </button>
           </div>
         </div>
-      </header>
+
+        <nav className="flex flex-col gap-1">
+          {[
+            { name: "Tentang Kami", href: "/about" },
+            { name: "Portofolio", href: "/#portfolio" },
+            { name: "Harga & Layanan", href: "/#services" },
+            { name: "Testimoni", href: "/#testimonials" },
+            { name: "Artikel", href: "/#blog" },
+          ].map((item) => (
+            <Link 
+              key={item.name}
+              onClick={() => setIsMenuOpen(false)} 
+              href={item.href} 
+              className="text-lg font-semibold py-4 border-b border-neutral-100 dark:border-neutral-900 text-neutral-800 dark:text-neutral-200 hover:text-black dark:hover:text-white transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+        
+        <div className="mt-auto pt-8">
+          <Link 
+            onClick={() => setIsMenuOpen(false)}
+            href={`https://wa.me/6287776266539?text=${encodeURIComponent("Halo Pilcodev, saya ingin berdiskusi tentang proyek saya.")}`}
+            className="w-full inline-block text-center px-5 py-4 text-sm font-bold rounded-2xl bg-black text-white dark:bg-white dark:text-black shadow-lg active:scale-95 transition-transform"
+          >
+            Mari Berdiskusi
+          </Link>
+          <p className="text-center text-[10px] text-neutral-500 mt-6 uppercase tracking-widest font-medium">
+            © {new Date().getFullYear()} Pilcodev Studio
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
