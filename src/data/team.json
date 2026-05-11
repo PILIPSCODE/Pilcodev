@@ -2,43 +2,109 @@
   {
     "id": "1",
     "name": "Chadrack",
-    "role": "WEB DEV",
+    "role": "Lead Web Developer",
+    "division": "web dev",
+    "isLead": true,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2vnSxNNVGZV2MXRjlGELl-NgLl5kXdpDR6A&s",
     "social": { "twitter": "#", "linkedin": "#", "behance": "#" }
   },
   {
     "id": "2",
     "name": "Mak VieSAinte",
-    "role": "BACKEND DEV",
+    "role": "Lead Backend Developer",
+    "division": "backend",
+    "isLead": true,
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2vnSxNNVGZV2MXRjlGELl-NgLl5kXdpDR6A&s",
     "social": { "twitter": "#", "linkedin": "#" }
   },
   {
     "id": "3",
     "name": "Osiris Balonga",
-    "role": "MOBILE DEV",
+    "role": "Lead Mobile Developer",
+    "division": "mobile",
+    "isLead": true,
     "image": "https://media.licdn.com/dms/image/v2/D4D03AQGVqrPPAGHtoQ/profile-displayphoto-scale_200_200/B4DZwhAkjaHwAY-/0/1770080338529?e=2147483647&v=beta&t=q-_6p1VCJ8NN8eHj9zUFwJZds_XpKez9Hy14SAIDp4M",
     "social": { "twitter": "#", "linkedin": "#" }
   },
   {
     "id": "4",
     "name": "Jacques",
-    "role": "DESKOP DEV",
+    "role": "Lead Desktop Developer",
+    "division": "desktop",
+    "isLead": true,
     "image": "https://media.licdn.com/dms/image/v2/D4D03AQE-Z7-S1LSYNQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1724143166545?e=2147483647&v=beta&t=6IPCwgOzblGt4p2fEdnY74gMbLyRHii5Ite3A39qQsY",
     "social": { "linkedin": "#" }
   },
   {
     "id": "5",
     "name": "Riche Makso",
-    "role": "ML ENGINEER",
+    "role": "Lead ML Engineer",
+    "division": "machine learning",
+    "isLead": true,
     "image": "https://media.licdn.com/dms/image/v2/D4D03AQEkTAbZLlSrLg/profile-displayphoto-scale_200_200/B4DZoHdu8BGgAY-/0/1761061833315?e=2147483647&v=beta&t=Rg1dBTvq9X2heyhuhBwG2DsEkG65v0vQ35hF2FSeYns",
     "social": { "twitter": "#", "linkedin": "#" }
   },
   {
     "id": "6",
     "name": "Jemima",
-    "role": "AI ENGINEER",
+    "role": "Lead Automation Engineer",
+    "division": "automation",
+    "isLead": true,
     "image": "https://i.pravatar.cc/400?img=16",
     "social": { "instagram": "#" }
+  },
+  {
+    "id": "7",
+    "name": "Alex Smith",
+    "role": "Senior Web Developer",
+    "division": "web dev",
+    "isLead": false,
+    "image": "https://i.pravatar.cc/400?img=11",
+    "social": { "linkedin": "#" }
+  },
+  {
+    "id": "8",
+    "name": "Elena Rodriguez",
+    "role": "Backend Developer",
+    "division": "backend",
+    "isLead": false,
+    "image": "https://i.pravatar.cc/400?img=5",
+    "social": { "linkedin": "#" }
+  },
+  {
+    "id": "9",
+    "name": "David Chen",
+    "role": "Mobile App Developer",
+    "division": "mobile",
+    "isLead": false,
+    "image": "https://i.pravatar.cc/400?img=12",
+    "social": { "linkedin": "#" }
+  },
+  {
+    "id": "10",
+    "name": "Sarah Jenkins",
+    "role": "Data Scientist",
+    "division": "machine learning",
+    "isLead": false,
+    "image": "https://i.pravatar.cc/400?img=9",
+    "social": { "linkedin": "#" }
+  },
+  {
+    "id": "11",
+    "name": "Michael Vane",
+    "role": "Desktop App Engineer",
+    "division": "desktop",
+    "isLead": false,
+    "image": "https://i.pravatar.cc/400?img=13",
+    "social": { "linkedin": "#" }
+  },
+  {
+    "id": "12",
+    "name": "Lisa Wong",
+    "role": "QA Automation",
+    "division": "automation",
+    "isLead": false,
+    "image": "https://i.pravatar.cc/400?img=10",
+    "social": { "linkedin": "#" }
   }
 ]

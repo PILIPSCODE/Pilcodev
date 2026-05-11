@@ -1,6 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { Services } from "@/components/Services";
 import { Portfolio } from "@/components/Portfolio";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
+import { Workflow } from "@/components/Workflow";
 import { Testimonials } from "@/components/Testimonials";
 import { Blog } from "@/components/Blog";
 import services from "@/data/services.json";
@@ -14,6 +16,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white">
       <Hero />
+      <WhyChooseUs />
+      <Workflow />
       <Portfolio />
       <Services services={services} />
       <Testimonials />

@@ -28,7 +28,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-neutral-600 dark:text-neutral-400 font-light max-w-sm text-lg leading-relaxed">
-              Membangun masa depan digital yang lebih baik, satu baris kode pada satu waktu. Kami merekayasa solusi yang mengubah cara bisnis beroperasi.
+              Mulai sekarang bersama partner digital yang terpercaya, karena langkah kecil hari ini lebih berarti daripada tidak memulai sama sekali.
             </p>
             <div className="mt-4">
               <Link

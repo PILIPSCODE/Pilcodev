@@ -555,16 +555,16 @@ export default function EtherealBeamsHero() {
 
             {/* Main Heading */}
             <h1 className="mb-6 text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] break-words">
-              Menciptakan{" "}
+              Bikin{" "}
               <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-                Keunggulan
+                Bisnismu untuk
               </span>{" "}
-              Digital.
+              Naik Level.
             </h1>
 
             {/* Subtitle */}
             <p className="mb-8 sm:mb-10 text-base sm:text-xl lg:text-2xl leading-relaxed sm:leading-8 text-white/80 max-w-3xl mx-auto font-light">
-              Kami merancang dan membangun solusi web, mobile, dan AI premium yang meningkatkan bisnis Anda ke level berikutnya.
+              Kami merancang dan membangun solusi web, mobile, deskop dan AI premium yang meningkatkan bisnismu ke level berikutnya.
             </p>
 
             {/* CTA Buttons */}
@@ -604,7 +604,7 @@ export default function EtherealBeamsHero() {
 
       {/* Gradient Overlay for better text readability */}
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/50 via-transparent to-black/30 pointer-events-none" />
-      
+
       {/* Promo Banner */}
       <PromoBanner />
     </div>

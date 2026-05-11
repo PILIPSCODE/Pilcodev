@@ -1,9 +1,12 @@
 import Image from "next/image";
 import TeamShowcase from "./ui/team-showcase";
 import teamData from "@/data/team.json";
-import { Star } from "lucide-react";
+import { Star, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function WhoWeAre() {
+  const leadTeam = teamData.filter((member: any) => member.isLead);
+
   return (
     <section className="relative pt-32 pb-24 px-6 md:px-24 bg-white dark:bg-black overflow-hidden transition-colors duration-300">
       {/* Ethereal Background Elements */}
@@ -76,7 +79,13 @@ export function WhoWeAre() {
               Sekumpulan individu berbakat yang berdedikasi untuk mengubah ide visioner Anda menjadi realitas digital yang luar biasa.
             </p>
           </div>
-          <TeamShowcase members={teamData} />
+          <TeamShowcase members={leadTeam} />
+          
+          <div className="mt-16 text-center">
+            <Link href="/about/team" className="text-black dark:text-white text-sm font-medium uppercase tracking-widest hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors pb-2 border-b border-neutral-300 dark:border-neutral-800 hover:border-neutral-600 dark:hover:border-neutral-400 inline-flex items-center gap-2">
+              Lihat Semua Tim <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

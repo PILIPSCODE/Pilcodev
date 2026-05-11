@@ -27,7 +27,7 @@ export function Portfolio() {
             Apa Yang <span className="font-medium italic">Kami Bangun</span>
           </h2>
           <p className="text-lg text-neutral-600 dark:text-neutral-400 font-light max-w-2xl mx-auto">
-            Sekilas tentang pengalaman digital yang telah kami ciptakan untuk merek-merek visioner.
+            Beberapa hasil karya digital yang kami bangun untuk membantu brand tampil lebih profesional, modern, dan siap berkembang di era digital.
           </p>
         </div>
 
@@ -70,17 +70,17 @@ export function Portfolio() {
                   <h3 className="text-2xl text-white font-bold mb-4">{project.title}</h3>
 
                   <div className="flex flex-wrap gap-3">
-                    <Link 
+                    <Link
                       href={`/portfolio/${project.slug}`}
                       className="px-4 py-2 bg-white text-black text-xs font-bold rounded-lg hover:bg-neutral-200 transition-colors flex items-center gap-2"
                     >
                       Lihat Detail
                     </Link>
-                    
+
                     {project.previewUrl && project.previewUrl !== "#" ? (
-                      <a 
-                        href={project.previewUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.previewUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 bg-white/20 backdrop-blur-md text-white rounded-lg hover:bg-white/30 transition-colors"
                         title="Live Preview"
@@ -88,7 +88,7 @@ export function Portfolio() {
                         <Globe className="w-4 h-4" />
                       </a>
                     ) : (
-                      <div 
+                      <div
                         className="p-2 bg-white/5 backdrop-blur-md text-white/20 rounded-lg cursor-not-allowed"
                         title="Preview tidak tersedia"
                       >
@@ -97,9 +97,9 @@ export function Portfolio() {
                     )}
 
                     {project.githubUrl && project.githubUrl !== "#" ? (
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
                         rel="noopener noreferrer"
                         className="p-2 bg-white/20 backdrop-blur-md text-white rounded-lg hover:bg-white/30 transition-colors"
                         title="Source Code"
@@ -107,7 +107,7 @@ export function Portfolio() {
                         <GitHubIcon className="w-4 h-4" />
                       </a>
                     ) : (
-                      <div 
+                      <div
                         className="p-2 bg-white/5 backdrop-blur-md text-white/20 rounded-lg cursor-not-allowed"
                         title="Source code tidak tersedia"
                       >
