@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Search, Filter, X, ArrowRight, LayoutGrid, Globe, Github, MessageSquare, Code2, Smartphone, Cpu, Monitor, Zap } from "lucide-react";
+import { Search, LayoutGrid, Globe, Code2, Smartphone, Cpu, Monitor, Zap } from "lucide-react";
 import teamData from "@/data/team.json";
 import { cn } from "@/lib/utils";
 import { FaLinkedinIn, FaTwitter, FaBehance, FaInstagram } from 'react-icons/fa';
